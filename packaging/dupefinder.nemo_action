@@ -1,0 +1,8 @@
+[Nemo Action]
+Active=true
+Name=Find duplicates here
+Comment=Scan this folder for duplicate files
+Exec=dupefinder %F
+Icon-Name=edit-find
+Selection=None
+Extensions=dir;

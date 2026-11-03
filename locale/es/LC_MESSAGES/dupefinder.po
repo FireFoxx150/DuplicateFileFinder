@@ -1,0 +1,613 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Ctrl+Enter or F5 — scan"
+msgstr "Ctrl+Intro o F5 — analizar"
+
+msgid "Escape — cancel scan"
+msgstr "Escape — cancelar análisis"
+
+msgid "Ctrl+P — pause or resume scan"
+msgstr "Ctrl+P — pausar o reanudar análisis"
+
+msgid "Ctrl+F — search results"
+msgstr "Ctrl+F — buscar en resultados"
+
+msgid "Ctrl+A — select all files in results"
+msgstr "Ctrl+A — seleccionar todos los archivos de resultados"
+
+msgid "Enter — open selected file"
+msgstr "Intro — abrir archivo seleccionado"
+
+msgid "Delete — move selected copies to trash"
+msgstr "Supr — mover copias seleccionadas a la papelera"
+
+msgid "Ctrl+E — export"
+msgstr "Ctrl+E — exportar"
+
+msgid "Ctrl+Z — undo last move"
+msgstr "Ctrl+Z — deshacer último movimiento"
+
+msgid "Set quarantine folder…"
+msgstr "Definir carpeta de cuarentena…"
+
+msgid "Command palette"
+msgstr "Paleta de comandos"
+
+msgid "History…"
+msgstr "Historial…"
+
+msgid "Max size (MB)"
+msgstr "Tamaño máximo (MB)"
+
+msgid "Modified within (days)"
+msgstr "Modificado en los últimos (días)"
+
+msgid "Preview"
+msgstr "Vista previa"
+
+msgid "Select by rule…"
+msgstr "Seleccionar por regla…"
+
+msgid "History"
+msgstr "Historial"
+
+msgid "Protect RAW pairs"
+msgstr "Proteger pares RAW"
+
+msgid "Name for these scan settings:"
+msgstr "Nombre para estos ajustes de análisis:"
+
+msgid "Saved profile “{name}”."
+msgstr "Perfil «{name}» guardado."
+
+msgid "subfolder levels must be 0 or more"
+msgstr "los niveles de subcarpetas deben ser 0 o más"
+
+msgid "max distance must be 0-256"
+msgstr "la distancia máxima debe estar entre 0 y 256"
+
+msgid "similarity must be 1-100"
+msgstr "la similitud debe estar entre 1 y 100"
+
+msgid "Check settings: {error}"
+msgstr "Revisa los ajustes: {error}"
+
+msgid " · about {s}s left"
+msgstr " · faltan unos {s} s"
+
+msgid "{n} groups, {w} reclaimable, {e} skipped, {s:.1f}s"
+msgstr "{n} grupos, {w} recuperables, {e} omitidos, {s:.1f} s"
+
+msgid ", {n} only in A"
+msgstr ", {n} solo en A"
+
+msgid "Watching {folder} every {m} minutes."
+msgstr "Vigilando {folder} cada {m} minutos."
+
+msgid "{n} new duplicate group(s) in {folder}"
+msgstr "{n} grupo(s) nuevo(s) de duplicados en {folder}"
+
+msgid "Cancel scan"
+msgstr "Cancelar análisis"
+
+msgid "Pause or resume scan"
+msgstr "Pausar o reanudar análisis"
+
+msgid "Theme: system"
+msgstr "Tema: sistema"
+
+msgid "Theme: light"
+msgstr "Tema: claro"
+
+msgid "Theme: dark"
+msgstr "Tema: oscuro"
+
+msgid "Theme: high contrast"
+msgstr "Tema: alto contraste"
+
+msgid "{n} selected · {s}"
+msgstr "{n} seleccionados · {s}"
+
+msgid "View full size"
+msgstr "Ver tamaño completo"
+
+msgid "Compare the two selected"
+msgstr "Comparar los dos seleccionados"
+
+msgid "Select extra copies in this group"
+msgstr "Seleccionar copias sobrantes de este grupo"
+
+msgid "Group ignored. It will not show again."
+msgstr "Grupo ignorado. No volverá a aparecer."
+
+msgid "modified {t}"
+msgstr "modificado {t}"
+
+msgid "Full-size view is for images."
+msgstr "La vista a tamaño completo es solo para imágenes."
+
+msgid "Cannot show image: {error}"
+msgstr "No se puede mostrar la imagen: {error}"
+
+msgid "Zoom in"
+msgstr "Acercar"
+
+msgid "Zoom out"
+msgstr "Alejar"
+
+msgid "Actual size"
+msgstr "Tamaño real"
+
+msgid "Select exactly two files to compare."
+msgstr "Selecciona exactamente dos archivos para comparar."
+
+msgid "Left {n} RAW file(s) alone: their JPEG pair is in the same folder."
+msgstr "Se dejaron {n} archivo(s) RAW: su par JPEG está en la misma carpeta."
+
+msgid "Select copies first."
+msgstr "Selecciona primero las copias."
+
+msgid "Would act on {n} copy(ies):"
+msgstr "Se actuaría sobre {n} copia(s):"
+
+msgid "Kept, to protect each group:"
+msgstr "Se conservan, para proteger cada grupo:"
+
+msgid "Nothing has been changed."
+msgstr "No se ha cambiado nada."
+
+msgid "Select by rule"
+msgstr "Seleccionar por regla"
+
+msgid "older than days"
+msgstr "más antiguas que (días)"
+
+msgid "Select copies (not the one kept) that are:"
+msgstr "Seleccionar copias (no la conservada) que sean:"
+
+msgid "larger than MB"
+msgstr "más grandes que (MB)"
+
+msgid "Enter a number."
+msgstr "Introduce un número."
+
+msgid "Selected {n} copy(ies) by rule."
+msgstr "Seleccionadas {n} copia(s) por regla."
+
+msgid "Select"
+msgstr "Seleccionar"
+
+msgid "Select copies to move to trash first."
+msgstr "Selecciona primero las copias que quieres mover a la papelera."
+
+msgid "Move {n} file(s) to the trash?"
+msgstr "¿Mover {n} archivo(s) a la papelera?"
+
+msgid "At least one copy in each group is always kept."
+msgstr "Siempre se conserva al menos una copia de cada grupo."
+
+msgid "Moved {n} file(s) to trash; kept {k} to protect groups."
+msgstr ""
+"Movidos {n} archivo(s) a la papelera; se conservaron {k} para proteger los "
+"grupos."
+
+msgid "Some files could not be trashed"
+msgstr "No se pudieron enviar algunos archivos a la papelera"
+
+msgid "Restored {n} file(s) from the trash. Rescan to see them in groups."
+msgstr ""
+"Restaurados {n} archivo(s) desde la papelera. Vuelve a analizar para verlos "
+"en los grupos."
+
+msgid "Some files could not be restored"
+msgstr "No se pudieron restaurar algunos archivos"
+
+msgid "Set a quarantine folder first (Edit menu)."
+msgstr "Define primero una carpeta de cuarentena (menú Editar)."
+
+msgid "Quarantine folder set to {f}."
+msgstr "Carpeta de cuarentena: {f}."
+
+msgid "Move copies into"
+msgstr "Mover copias a"
+
+msgid "Select copies to move first."
+msgstr "Selecciona primero las copias que quieres mover."
+
+msgid "Moved {n} file(s) to {d}. Ctrl+Z undoes this move."
+msgstr "Movidos {n} archivo(s) a {d}. Ctrl+Z deshace este movimiento."
+
+msgid "Some files could not be moved"
+msgstr "No se pudieron mover algunos archivos"
+
+msgid "Put back {n} file(s). Rescan to see them in groups."
+msgstr "Devueltos {n} archivo(s). Vuelve a analizar para verlos en los grupos."
+
+msgid "Some files could not be put back"
+msgstr "No se pudieron devolver algunos archivos"
+
+msgid "Hard links are only offered for exact copies."
+msgstr "Los enlaces duros solo se ofrecen para copias exactas."
+
+msgid "Select copies to replace with hard links first."
+msgstr "Selecciona primero las copias que quieres sustituir por enlaces duros."
+
+msgid "Replace {n} file(s) with hard links to a kept copy?"
+msgstr "¿Sustituir {n} archivo(s) por enlaces duros a una copia conservada?"
+
+msgid "Their disk space is freed. Each file keeps its name and path."
+msgstr ""
+"Se libera su espacio en disco. Cada archivo conserva su nombre y su ruta."
+
+msgid "Replaced {n} file(s) with hard links."
+msgstr "Sustituidos {n} archivo(s) por enlaces duros."
+
+msgid "Some files could not be linked"
+msgstr "No se pudieron enlazar algunos archivos"
+
+msgid "Exported {n} groups to {p}."
+msgstr "Exportados {n} grupos a {p}."
+
+msgid "Saved results to {p}."
+msgstr "Resultados guardados en {p}."
+
+msgid "Loaded {n} groups; {m} files were no longer there."
+msgstr "Cargados {n} grupos; {m} archivos ya no están."
+
+msgid "Schedule scans"
+msgstr "Programar análisis"
+
+msgid "Every (hours)"
+msgstr "Cada (horas)"
+
+msgid "Hours must be a whole number."
+msgstr "Las horas deben ser un número entero."
+
+msgid "Install schedule"
+msgstr "Instalar programación"
+
+msgid "Remove schedule"
+msgstr "Quitar programación"
+
+msgid "Scan first."
+msgstr "Analiza primero."
+
+msgid "(top level)"
+msgstr "(nivel superior)"
+
+msgid "Custom actions"
+msgstr "Acciones personalizadas"
+
+msgid "Use {path} where the file path goes. Runs without a shell."
+msgstr "Usa {path} donde va la ruta del archivo. Se ejecuta sin shell."
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Command"
+msgstr "Comando"
+
+msgid "Add action"
+msgstr "Añadir acción"
+
+msgid "Remove selected"
+msgstr "Quitar seleccionada"
+
+msgid "Skipped files ({n})"
+msgstr "Archivos omitidos ({n})"
+
+msgid "Files in A with no copy in B ({n})"
+msgstr "Archivos en A sin copia en B ({n})"
+
+msgid "Name clashes ({n})"
+msgstr "Nombres repetidos ({n})"
+
+msgid "Compare two folders"
+msgstr "Comparar dos carpetas"
+
+msgid "Exact copies"
+msgstr "Copias exactas"
+
+msgid "Similar images"
+msgstr "Imágenes similares"
+
+msgid "Similar documents"
+msgstr "Documentos similares"
+
+msgid "Similar videos"
+msgstr "Videos similares"
+
+msgid "Similar audio"
+msgstr "Audio similar"
+
+msgid "Duplicate File Finder"
+msgstr "Buscador de archivos duplicados"
+
+msgid "Pick a folder and press Scan."
+msgstr "Elige una carpeta y pulsa Analizar."
+
+msgid "Scan"
+msgstr "Analizar"
+
+msgid "Pause"
+msgstr "Pausar"
+
+msgid "Resume"
+msgstr "Reanudar"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Folder"
+msgstr "Carpeta"
+
+msgid "Folder B"
+msgstr "Carpeta B"
+
+msgid "Mode"
+msgstr "Modo"
+
+msgid "Browse…"
+msgstr "Examinar…"
+
+msgid "Choose folder…"
+msgstr "Elegir carpeta…"
+
+msgid "Include hidden"
+msgstr "Incluir ocultos"
+
+msgid "Skip caches and build folders"
+msgstr "Omitir cachés y carpetas de compilación"
+
+msgid "Verify bytes"
+msgstr "Verificar bytes"
+
+msgid "Profile"
+msgstr "Perfil"
+
+msgid "Save profile…"
+msgstr "Guardar perfil…"
+
+msgid "Delete profile"
+msgstr "Eliminar perfil"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "Group / file"
+msgstr "Grupo / archivo"
+
+msgid "Size"
+msgstr "Tamaño"
+
+msgid "Copies"
+msgstr "Copias"
+
+msgid "Modified"
+msgstr "Modificado"
+
+msgid "Taken"
+msgstr "Tomada"
+
+msgid "Camera"
+msgstr "Cámara"
+
+msgid "Keep"
+msgstr "Conservar"
+
+msgid "Select extra copies"
+msgstr "Seleccionar copias sobrantes"
+
+msgid "Move to trash"
+msgstr "Mover a la papelera"
+
+msgid "Quarantine"
+msgstr "Cuarentena"
+
+msgid "Move to folder…"
+msgstr "Mover a carpeta…"
+
+msgid "Hard-link copies"
+msgstr "Crear enlaces duros"
+
+msgid "Open file"
+msgstr "Abrir archivo"
+
+msgid "Show in folder"
+msgstr "Mostrar en carpeta"
+
+msgid "Compare two"
+msgstr "Comparar dos"
+
+msgid "Export…"
+msgstr "Exportar…"
+
+msgid "Errors"
+msgstr "Errores"
+
+msgid "Name clashes"
+msgstr "Nombres repetidos"
+
+msgid "Only in A"
+msgstr "Solo en A"
+
+msgid "File"
+msgstr "Archivo"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Tools"
+msgstr "Herramientas"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Help"
+msgstr "Ayuda"
+
+msgid "Quit"
+msgstr "Salir"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Larger text"
+msgstr "Texto más grande"
+
+msgid "Smaller text"
+msgstr "Texto más pequeño"
+
+msgid "Keyboard shortcuts"
+msgstr "Atajos de teclado"
+
+msgid "Save results…"
+msgstr "Guardar resultados…"
+
+msgid "Load results…"
+msgstr "Cargar resultados…"
+
+msgid "Undo last move"
+msgstr "Deshacer último movimiento"
+
+msgid "Restore last trashed"
+msgstr "Restaurar lo último enviado a la papelera"
+
+msgid "Schedule scans…"
+msgstr "Programar análisis…"
+
+msgid "Watch this folder"
+msgstr "Vigilar esta carpeta"
+
+msgid "Space by type…"
+msgstr "Espacio por tipo…"
+
+msgid "Disk usage map…"
+msgstr "Mapa de uso del disco…"
+
+msgid "Custom actions…"
+msgstr "Acciones personalizadas…"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Light"
+msgstr "Claro"
+
+msgid "Dark"
+msgstr "Oscuro"
+
+msgid "High contrast"
+msgstr "Alto contraste"
+
+msgid "Only extensions"
+msgstr "Solo extensiones"
+
+msgid "Skip names"
+msgstr "Omitir nombres"
+
+msgid "Min size (KB)"
+msgstr "Tamaño mínimo (KB)"
+
+msgid "Max subfolder levels"
+msgstr "Niveles de subcarpetas máx."
+
+msgid "Max distance"
+msgstr "Distancia máxima"
+
+msgid "Min similarity %"
+msgstr "Similitud mínima %"
+
+msgid "Scanning…"
+msgstr "Analizando…"
+
+msgid "Cancelling…"
+msgstr "Cancelando…"
+
+msgid "Scan cancelled."
+msgstr "Análisis cancelado."
+
+msgid "Resumed."
+msgstr "Reanudado."
+
+msgid "Paused."
+msgstr "En pausa."
+
+msgid "Select a file first."
+msgstr "Selecciona primero un archivo."
+
+msgid "Folder A does not exist."
+msgstr "La carpeta A no existe."
+
+msgid "Folder B does not exist."
+msgstr "La carpeta B no existe."
+
+msgid "Path copied."
+msgstr "Ruta copiada."
+
+msgid "Copy path"
+msgstr "Copiar ruta"
+
+msgid "Group by"
+msgstr "Agrupar por"
+
+msgid "Duplicate group"
+msgstr "Grupo duplicado"
+
+msgid "Month taken"
+msgstr "Mes de la foto"
+
+msgid "No date"
+msgstr "Sin fecha"
+
+msgid "Up"
+msgstr "Subir"
+
+msgid "Nothing to map here."
+msgstr "Nada que mostrar aquí."
+
+msgid "(this folder)"
+msgstr "(esta carpeta)"
+
+msgid "Ignore this group"
+msgstr "Ignorar este grupo"
+
+msgid "Run action"
+msgstr "Ejecutar acción"
+
+msgid "Nothing to show."
+msgstr "Nada que mostrar."
+
+msgid "Quarantine folder"
+msgstr "Carpeta de cuarentena"
+
+msgid "Nothing to restore."
+msgstr "Nada que restaurar."
+
+msgid "Nothing to undo."
+msgstr "Nada que deshacer."
+
+msgid "Stopped watching."
+msgstr "Vigilancia detenida."
+
+msgid "Scheduled. Reports are written to {r}."
+msgstr "Programado. Los informes se guardan en {r}."
+
+msgid "Schedule removed."
+msgstr "Programación eliminada."
+
+msgid "Custom action"
+msgstr "Acción personalizada"
+
+msgid "Compare"
+msgstr "Comparar"
+
+msgid "Disk usage map"
+msgstr "Mapa de uso del disco"
+
+msgid "Reclaimable space by type"
+msgstr "Espacio recuperable por tipo"
+
+msgid "Save profile"
+msgstr "Guardar perfil"

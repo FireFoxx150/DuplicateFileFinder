@@ -1,0 +1,139 @@
+dupefinder (2.6.0) unstable; urgency=medium
+
+  * Similar videos compare frames by pixel correlation, allowing for crops,
+    and match when at least 90% of frames agree. Recall on the test clips
+    went from about 50% to 97%.
+  * The video threshold is now a percentage of matching frames.
+
+ -- matthew <firefoxx.ms@gmail.com>  Tue, 03 Nov 2026 10:00:00 +0000
+
+dupefinder (2.5.3) unstable; urgency=medium
+
+  * The Spanish translation covers the whole interface.
+  * When running from source with cupy and a CUDA GPU, the image comparison
+    runs on the GPU. The packaged version uses the CPU.
+
+ -- matthew <firefoxx.ms@gmail.com>  Wed, 28 Oct 2026 14:00:00 +0000
+
+dupefinder (2.5.2) unstable; urgency=medium
+
+  * Drives are listed by their volume label instead of their mount point,
+    when they have one.
+
+ -- matthew <firefoxx.ms@gmail.com>  Wed, 28 Oct 2026 12:00:00 +0000
+
+dupefinder (2.5.1) unstable; urgency=medium
+
+  * Image comparison runs as a numpy matrix product, about 6 times faster.
+  * Files are read on all CPU cores.
+
+ -- matthew <firefoxx.ms@gmail.com>  Wed, 28 Oct 2026 10:00:00 +0000
+
+dupefinder (2.5.0) unstable; urgency=medium
+
+  * Similar images match rotated and cropped copies (256-bit hashes, default
+    threshold 16).
+  * Similar videos sample a frame every two seconds, skip blank frames, and
+    match cropped copies (default threshold 70).
+  * Similar documents default to 70%, so edited copies are found.
+  * Groups only join files that match every member, so unrelated files no
+    longer end up together through a chain of matches.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 26 Oct 2026 10:00:00 +0000
+
+dupefinder (2.4.0) unstable; urgency=medium
+
+  * dupefinder-cli --apply refuses to trash more than --max-files copies
+    (default 500).
+  * --hardlink-plan lists copies that could become hard links on the same drive.
+  * --mail-to emails the HTML report through an SMTP server.
+  * README with install, usage, cleanup safety and file locations.
+
+ -- matthew <firefoxx.ms@gmail.com>  Tue, 20 Oct 2026 19:00:00 +0000
+
+dupefinder (2.3.0) unstable; urgency=medium
+
+  * Keep rules: prefer clean names and prefer the best version (resolution
+    or bitrate). RAW and JPEG pairs in one folder are protected by default.
+  * Filters for maximum size, modification age, and .dupeignore files.
+  * Parallel hashing, dry-run preview, select copies by rule, and an action
+    history.
+  * Cleanup and live-watch modes in dupefinder-cli, with webhook alerts.
+  * Excel export, a command palette (Ctrl+K), and a Nemo right-click action.
+
+ -- matthew <firefoxx.ms@gmail.com>  Tue, 20 Oct 2026 09:00:00 +0000
+
+dupefinder (2.2.0) unstable; urgency=medium
+
+  * Group results by the month a photo was taken.
+  * Disk usage map drills into folders, with an Up button.
+  * CLI output is flushed as it is printed, so watch mode output survives
+    being piped or stopped.
+  * Spanish translation covers the new labels.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 17:00:00 +0000
+
+dupefinder (2.1.0) unstable; urgency=medium
+
+  * Ignore groups you have reviewed, check bytes before grouping, and keep
+    the copy inside a chosen folder.
+  * Restore files from the trash, quarantine folder, and custom commands
+    per file.
+  * Scheduled scans through a systemd user timer, and a watch mode.
+  * Similar audio mode, reclaimable space by file type, and a disk usage map.
+  * Photo date and camera columns, thumbnails, saved scan profiles, and a
+    high contrast theme.
+  * Spanish translation for the main interface.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 16:00:00 +0000
+
+dupefinder (2.0.0) unstable; urgency=medium
+
+  * Dark and light themes, text size, remembered window size and recent
+    folders.
+  * Keyboard shortcuts, right-click menu, selection summary, and drag a
+    folder onto the window.
+  * Pause and resume scans, time left, skip patterns, subfolder depth limit.
+  * Similar documents and similar videos modes; name-clash report.
+  * Hard-link copies, move to a folder with undo, save and load results.
+  * HTML report export, full-size image view, side-by-side compare, photo
+    details.
+  * Hex view for binary files; video previews cover about 30 formats.
+  * New dupefinder-cli command for scripts.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 15:00:00 +0000
+
+dupefinder (1.3.1) unstable; urgency=medium
+
+  * Double-click a file in the results to open it in the default app.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 14:00:00 +0000
+
+dupefinder (1.3.0) unstable; urgency=medium
+
+  * Video previews cover about 30 container formats (MP4, MKV, MOV, AVI, WebM,
+    FLV, WMV, MPEG, MPEG-TS, 3GP, OGV and more). The package recommends ffmpeg.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 13:00:00 +0000
+
+dupefinder (1.2.0) unstable; urgency=medium
+
+  * Browse buttons list every mounted local drive, then "Choose folder…" for
+    any other folder.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 12:00:00 +0000
+
+dupefinder (1.1.0) unstable; urgency=medium
+
+  * Drive dropdowns next to each folder field list every mounted local drive
+    with its free space, so other drives can be scanned without browsing.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 11:00:00 +0000
+
+dupefinder (1.0.0) unstable; urgency=medium
+
+  * First packaged release: exact duplicates, similar images, folder
+    comparison, previews, move-to-trash with keeper rules, export, and a
+    standalone executable.
+
+ -- matthew <firefoxx.ms@gmail.com>  Mon, 19 Oct 2026 10:00:00 +0000

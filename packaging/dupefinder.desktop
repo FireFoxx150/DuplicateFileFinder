@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Duplicate File Finder
+Comment=Find and remove duplicate files
+Exec=dupefinder
+Icon=edit-find
+Terminal=false
+Categories=Utility;FileTools;

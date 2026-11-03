@@ -1,0 +1,3 @@
+# Optional previews: PDF first page and audio tags. Video thumbnails need the ffmpeg program instead.
+pypdfium2
+mutagen

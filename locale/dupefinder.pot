@@ -1,0 +1,855 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the dupefinder package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: dupefinder 2.5.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-28 08:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gui.py:36
+msgid "Compare two folders"
+msgstr ""
+
+#: gui.py:37
+msgid "Exact copies"
+msgstr ""
+
+#: gui.py:37
+msgid "Similar images"
+msgstr ""
+
+#: gui.py:37
+msgid "Similar documents"
+msgstr ""
+
+#: gui.py:38
+msgid "Similar videos"
+msgstr ""
+
+#: gui.py:38
+msgid "Similar audio"
+msgstr ""
+
+#: gui.py:40
+msgid "Max distance"
+msgstr ""
+
+#: gui.py:41
+msgid "Min similarity %"
+msgstr ""
+
+#: gui.py:56
+msgid "Ctrl+Enter or F5 — scan"
+msgstr ""
+
+#: gui.py:56
+msgid "Escape — cancel scan"
+msgstr ""
+
+#: gui.py:56
+msgid "Ctrl+P — pause or resume scan"
+msgstr ""
+
+#: gui.py:57
+msgid "Ctrl+F — search results"
+msgstr ""
+
+#: gui.py:57
+msgid "Ctrl+A — select all files in results"
+msgstr ""
+
+#: gui.py:57
+msgid "Enter — open selected file"
+msgstr ""
+
+#: gui.py:58
+msgid "Delete — move selected copies to trash"
+msgstr ""
+
+#: gui.py:58
+msgid "Ctrl+E — export"
+msgstr ""
+
+#: gui.py:58
+msgid "Ctrl+Z — undo last move"
+msgstr ""
+
+#: gui.py:60
+msgid "System"
+msgstr ""
+
+#: gui.py:60
+msgid "Light"
+msgstr ""
+
+#: gui.py:60
+msgid "Dark"
+msgstr ""
+
+#: gui.py:60
+msgid "High contrast"
+msgstr ""
+
+#: gui.py:119 gui.py:633
+msgid "Duplicate File Finder"
+msgstr ""
+
+#: gui.py:157 gui.py:294
+msgid "Duplicate group"
+msgstr ""
+
+#: gui.py:159
+msgid "Pick a folder and press Scan."
+msgstr ""
+
+#: gui.py:181
+msgid "Save results…"
+msgstr ""
+
+#: gui.py:182
+msgid "Load results…"
+msgstr ""
+
+#: gui.py:183 gui.py:342 gui.py:677
+msgid "Export…"
+msgstr ""
+
+#: gui.py:185
+msgid "Quit"
+msgstr ""
+
+#: gui.py:186
+msgid "File"
+msgstr ""
+
+#: gui.py:188 gui.py:677
+msgid "Undo last move"
+msgstr ""
+
+#: gui.py:189 gui.py:678
+msgid "Restore last trashed"
+msgstr ""
+
+#: gui.py:190
+msgid "Set quarantine folder…"
+msgstr ""
+
+#: gui.py:191
+msgid "Edit"
+msgstr ""
+
+#: gui.py:193 gui.py:681
+msgid "Schedule scans…"
+msgstr ""
+
+#: gui.py:194
+msgid "Watch this folder"
+msgstr ""
+
+#: gui.py:195 gui.py:682
+msgid "Space by type…"
+msgstr ""
+
+#: gui.py:196 gui.py:682
+msgid "Disk usage map…"
+msgstr ""
+
+#: gui.py:197 gui.py:683
+msgid "Custom actions…"
+msgstr ""
+
+#: gui.py:198 gui.py:696
+msgid "Command palette"
+msgstr ""
+
+#: gui.py:199
+msgid "History…"
+msgstr ""
+
+#: gui.py:200
+msgid "Tools"
+msgstr ""
+
+#: gui.py:205
+msgid "Theme"
+msgstr ""
+
+#: gui.py:206 gui.py:684
+msgid "Larger text"
+msgstr ""
+
+#: gui.py:207 gui.py:684
+msgid "Smaller text"
+msgstr ""
+
+#: gui.py:208
+msgid "View"
+msgstr ""
+
+#: gui.py:210 gui.py:683 gui.py:1355
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: gui.py:211
+msgid "Help"
+msgstr ""
+
+#: gui.py:220
+msgid "Mode"
+msgstr ""
+
+#: gui.py:224 gui.py:1180
+msgid "Folder"
+msgstr ""
+
+#: gui.py:230
+msgid "Folder B"
+msgstr ""
+
+#: gui.py:245
+msgid "Min size (KB)"
+msgstr ""
+
+#: gui.py:246
+msgid "Only extensions"
+msgstr ""
+
+#: gui.py:247
+msgid "Skip names"
+msgstr ""
+
+#: gui.py:248
+msgid "Max subfolder levels"
+msgstr ""
+
+#: gui.py:249
+msgid "Max size (MB)"
+msgstr ""
+
+#: gui.py:250
+msgid "Modified within (days)"
+msgstr ""
+
+#: gui.py:256
+msgid "Include hidden"
+msgstr ""
+
+#: gui.py:257
+msgid "Skip caches and build folders"
+msgstr ""
+
+#: gui.py:258
+msgid "Verify bytes"
+msgstr ""
+
+#: gui.py:262
+msgid "Profile"
+msgstr ""
+
+#: gui.py:266
+msgid "Save profile…"
+msgstr ""
+
+#: gui.py:267
+msgid "Delete profile"
+msgstr ""
+
+#: gui.py:271 gui.py:676
+msgid "Scan"
+msgstr ""
+
+#: gui.py:273 gui.py:553 gui.py:581
+msgid "Pause"
+msgstr ""
+
+#: gui.py:276
+msgid "Cancel"
+msgstr ""
+
+#: gui.py:289
+msgid "Search"
+msgstr ""
+
+#: gui.py:292
+msgid "Group by"
+msgstr ""
+
+#: gui.py:294 gui.py:784
+msgid "Month taken"
+msgstr ""
+
+#: gui.py:302
+msgid "Group / file"
+msgstr ""
+
+#: gui.py:303
+msgid "Size"
+msgstr ""
+
+#: gui.py:304
+msgid "Copies"
+msgstr ""
+
+#: gui.py:305
+msgid "Modified"
+msgstr ""
+
+#: gui.py:306
+msgid "Taken"
+msgstr ""
+
+#: gui.py:307
+msgid "Camera"
+msgstr ""
+
+#: gui.py:330
+msgid "Keep"
+msgstr ""
+
+#: gui.py:334 gui.py:680
+msgid "Select extra copies"
+msgstr ""
+
+#: gui.py:335 gui.py:678 gui.py:865 gui.py:1055
+msgid "Move to trash"
+msgstr ""
+
+#: gui.py:336
+msgid "Quarantine"
+msgstr ""
+
+#: gui.py:337
+msgid "Move to folder…"
+msgstr ""
+
+#: gui.py:338 gui.py:679 gui.py:1137
+msgid "Hard-link copies"
+msgstr ""
+
+#: gui.py:339 gui.py:850
+msgid "Open file"
+msgstr ""
+
+#: gui.py:340 gui.py:851
+msgid "Show in folder"
+msgstr ""
+
+#: gui.py:341
+msgid "Compare two"
+msgstr ""
+
+#: gui.py:343 gui.py:679 gui.py:1018
+msgid "Preview"
+msgstr ""
+
+#: gui.py:344 gui.py:680
+msgid "Select by rule…"
+msgstr ""
+
+#: gui.py:345 gui.py:681 gui.py:1048
+msgid "History"
+msgstr ""
+
+#: gui.py:346
+msgid "Protect RAW pairs"
+msgstr ""
+
+#: gui.py:348
+msgid "Errors"
+msgstr ""
+
+#: gui.py:349
+msgid "Name clashes"
+msgstr ""
+
+#: gui.py:350
+msgid "Only in A"
+msgstr ""
+
+#: gui.py:367
+msgid "Browse…"
+msgstr ""
+
+#: gui.py:379
+msgid "Choose folder…"
+msgstr ""
+
+#: gui.py:462
+msgid "Save profile"
+msgstr ""
+
+#: gui.py:462
+msgid "Name for these scan settings:"
+msgstr ""
+
+#: gui.py:468
+#, python-brace-format
+msgid "Saved profile “{name}”."
+msgstr ""
+
+#: gui.py:504
+msgid "subfolder levels must be 0 or more"
+msgstr ""
+
+#: gui.py:511 gui.py:513
+msgid "max distance must be 0-256"
+msgstr ""
+
+#: gui.py:515
+msgid "similarity must be 1-100"
+msgstr ""
+
+#: gui.py:535 gui.py:646
+msgid "Folder A does not exist."
+msgstr ""
+
+#: gui.py:538
+msgid "Folder B does not exist."
+msgstr ""
+
+#: gui.py:543
+#, python-brace-format
+msgid "Check settings: {error}"
+msgstr ""
+
+#: gui.py:554
+msgid "Scanning…"
+msgstr ""
+
+#: gui.py:574
+msgid "Cancelling…"
+msgstr ""
+
+#: gui.py:582
+msgid "Resumed."
+msgstr ""
+
+#: gui.py:585
+msgid "Resume"
+msgstr ""
+
+#: gui.py:586
+msgid "Paused."
+msgstr ""
+
+#: gui.py:600
+#, python-brace-format
+msgid " · about {s}s left"
+msgstr ""
+
+#: gui.py:621
+msgid "Scan cancelled."
+msgstr ""
+
+#: gui.py:624
+#, python-brace-format
+msgid "{n} groups, {w} reclaimable, {e} skipped, {s:.1f}s"
+msgstr ""
+
+#: gui.py:627
+#, python-brace-format
+msgid ", {n} only in A"
+msgstr ""
+
+#: gui.py:641
+msgid "Stopped watching."
+msgstr ""
+
+#: gui.py:649
+#, python-brace-format
+msgid "Watching {folder} every {m} minutes."
+msgstr ""
+
+#: gui.py:670
+#, python-brace-format
+msgid "{n} new duplicate group(s) in {folder}"
+msgstr ""
+
+#: gui.py:676
+msgid "Cancel scan"
+msgstr ""
+
+#: gui.py:676
+msgid "Pause or resume scan"
+msgstr ""
+
+#: gui.py:685
+msgid "Theme: system"
+msgstr ""
+
+#: gui.py:685
+msgid "Theme: light"
+msgstr ""
+
+#: gui.py:686
+msgid "Theme: dark"
+msgstr ""
+
+#: gui.py:687
+msgid "Theme: high contrast"
+msgstr ""
+
+#: gui.py:777
+msgid "No date"
+msgstr ""
+
+#: gui.py:818
+#, python-brace-format
+msgid "{n} selected · {s}"
+msgstr ""
+
+#: gui.py:852
+msgid "Copy path"
+msgstr ""
+
+#: gui.py:853
+msgid "View full size"
+msgstr ""
+
+#: gui.py:855
+msgid "Compare the two selected"
+msgstr ""
+
+#: gui.py:857 gui.py:863
+msgid "Ignore this group"
+msgstr ""
+
+#: gui.py:860
+msgid "Run action"
+msgstr ""
+
+#: gui.py:862
+msgid "Select extra copies in this group"
+msgstr ""
+
+#: gui.py:880
+msgid "Group ignored. It will not show again."
+msgstr ""
+
+#: gui.py:897 gui.py:1319
+msgid "Select a file first."
+msgstr ""
+
+#: gui.py:906
+msgid "Path copied."
+msgstr ""
+
+#: gui.py:915
+#, python-brace-format
+msgid "modified {t}"
+msgstr ""
+
+#: gui.py:939
+msgid "Full-size view is for images."
+msgstr ""
+
+#: gui.py:945
+#, python-brace-format
+msgid "Cannot show image: {error}"
+msgstr ""
+
+#: gui.py:966
+msgid "Zoom in"
+msgstr ""
+
+#: gui.py:967
+msgid "Zoom out"
+msgstr ""
+
+#: gui.py:968
+msgid "Actual size"
+msgstr ""
+
+#: gui.py:974
+msgid "Select exactly two files to compare."
+msgstr ""
+
+#: gui.py:977
+msgid "Compare"
+msgstr ""
+
+#: gui.py:1004
+#, python-brace-format
+msgid "Left {n} RAW file(s) alone: their JPEG pair is in the same folder."
+msgstr ""
+
+#: gui.py:1012
+msgid "Select copies first."
+msgstr ""
+
+#: gui.py:1015
+#, python-brace-format
+msgid "Would act on {n} copy(ies):"
+msgstr ""
+
+#: gui.py:1016
+msgid "Kept, to protect each group:"
+msgstr ""
+
+#: gui.py:1017
+msgid "Nothing has been changed."
+msgstr ""
+
+#: gui.py:1022
+msgid "Select by rule"
+msgstr ""
+
+#: gui.py:1024 gui.py:1027 gui.py:1036
+msgid "older than days"
+msgstr ""
+
+#: gui.py:1025
+msgid "Select copies (not the one kept) that are:"
+msgstr ""
+
+#: gui.py:1027
+msgid "larger than MB"
+msgstr ""
+
+#: gui.py:1034
+msgid "Enter a number."
+msgstr ""
+
+#: gui.py:1039
+#, python-brace-format
+msgid "Selected {n} copy(ies) by rule."
+msgstr ""
+
+#: gui.py:1042
+msgid "Select"
+msgstr ""
+
+#: gui.py:1053
+msgid "Select copies to move to trash first."
+msgstr ""
+
+#: gui.py:1056
+#, python-brace-format
+msgid "Move {n} file(s) to the trash?"
+msgstr ""
+
+#: gui.py:1057
+msgid "At least one copy in each group is always kept."
+msgstr ""
+
+#: gui.py:1063
+#, python-brace-format
+msgid "Moved {n} file(s) to trash; kept {k} to protect groups."
+msgstr ""
+
+#: gui.py:1066
+msgid "Some files could not be trashed"
+msgstr ""
+
+#: gui.py:1072
+msgid "Nothing to restore."
+msgstr ""
+
+#: gui.py:1085
+#, python-brace-format
+msgid "Restored {n} file(s) from the trash. Rescan to see them in groups."
+msgstr ""
+
+#: gui.py:1087
+msgid "Some files could not be restored"
+msgstr ""
+
+#: gui.py:1092
+msgid "Set a quarantine folder first (Edit menu)."
+msgstr ""
+
+#: gui.py:1097
+msgid "Quarantine folder"
+msgstr ""
+
+#: gui.py:1101
+#, python-brace-format
+msgid "Quarantine folder set to {f}."
+msgstr ""
+
+#: gui.py:1104
+msgid "Move copies into"
+msgstr ""
+
+#: gui.py:1111
+msgid "Select copies to move first."
+msgstr ""
+
+#: gui.py:1116
+#, python-brace-format
+msgid "Moved {n} file(s) to {d}. Ctrl+Z undoes this move."
+msgstr ""
+
+#: gui.py:1118
+msgid "Some files could not be moved"
+msgstr ""
+
+#: gui.py:1123
+#, python-brace-format
+msgid "Put back {n} file(s). Rescan to see them in groups."
+msgstr ""
+
+#: gui.py:1124
+msgid "Nothing to undo."
+msgstr ""
+
+#: gui.py:1126
+msgid "Some files could not be put back"
+msgstr ""
+
+#: gui.py:1131
+msgid "Hard links are only offered for exact copies."
+msgstr ""
+
+#: gui.py:1135
+msgid "Select copies to replace with hard links first."
+msgstr ""
+
+#: gui.py:1138
+#, python-brace-format
+msgid "Replace {n} file(s) with hard links to a kept copy?"
+msgstr ""
+
+#: gui.py:1139
+msgid "Their disk space is freed. Each file keeps its name and path."
+msgstr ""
+
+#: gui.py:1143
+#, python-brace-format
+msgid "Replaced {n} file(s) with hard links."
+msgstr ""
+
+#: gui.py:1145
+msgid "Some files could not be linked"
+msgstr ""
+
+#: gui.py:1154
+#, python-brace-format
+msgid "Exported {n} groups to {p}."
+msgstr ""
+
+#: gui.py:1160
+#, python-brace-format
+msgid "Saved results to {p}."
+msgstr ""
+
+#: gui.py:1171
+#, python-brace-format
+msgid "Loaded {n} groups; {m} files were no longer there."
+msgstr ""
+
+#: gui.py:1177
+msgid "Schedule scans"
+msgstr ""
+
+#: gui.py:1180
+msgid "Every (hours)"
+msgstr ""
+
+#: gui.py:1189
+msgid "Hours must be a whole number."
+msgstr ""
+
+#: gui.py:1195
+#, python-brace-format
+msgid "Scheduled. Reports are written to {r}."
+msgstr ""
+
+#: gui.py:1204
+msgid "Schedule removed."
+msgstr ""
+
+#: gui.py:1208
+msgid "Install schedule"
+msgstr ""
+
+#: gui.py:1209
+msgid "Remove schedule"
+msgstr ""
+
+#: gui.py:1213 gui.py:1220
+msgid "Scan first."
+msgstr ""
+
+#: gui.py:1216
+msgid "Reclaimable space by type"
+msgstr ""
+
+#: gui.py:1223
+msgid "Disk usage map"
+msgstr ""
+
+#: gui.py:1230
+msgid "Up"
+msgstr ""
+
+#: gui.py:1243
+msgid "Nothing to map here."
+msgstr ""
+
+#: gui.py:1261
+msgid "(this folder)"
+msgstr ""
+
+#: gui.py:1261
+msgid "(top level)"
+msgstr ""
+
+#: gui.py:1270
+msgid "Custom actions"
+msgstr ""
+
+#: gui.py:1272
+#, python-brace-format
+msgid "Use {path} where the file path goes. Runs without a shell."
+msgstr ""
+
+#: gui.py:1277
+msgid "Name"
+msgstr ""
+
+#: gui.py:1279
+msgid "Command"
+msgstr ""
+
+#: gui.py:1306
+msgid "Add action"
+msgstr ""
+
+#: gui.py:1307
+msgid "Remove selected"
+msgstr ""
+
+#: gui.py:1328
+msgid "Custom action"
+msgstr ""
+
+#: gui.py:1339
+msgid "Nothing to show."
+msgstr ""
+
+#: gui.py:1343
+#, python-brace-format
+msgid "Skipped files ({n})"
+msgstr ""
+
+#: gui.py:1346
+#, python-brace-format
+msgid "Files in A with no copy in B ({n})"
+msgstr ""
+
+#: gui.py:1352
+#, python-brace-format
+msgid "Name clashes ({n})"
+msgstr ""
