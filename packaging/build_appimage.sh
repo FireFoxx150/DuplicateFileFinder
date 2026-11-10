@@ -4,7 +4,7 @@
 # Not run in this project yet: appimagetool was not installed when this was written.
 set -euo pipefail
 
-VERSION=2.7.0
+VERSION=2.7.1
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 DEB="$ROOT/dist/dupefinder_${VERSION}_$(dpkg --print-architecture).deb"
 TOOL=${APPIMAGETOOL:-appimagetool}

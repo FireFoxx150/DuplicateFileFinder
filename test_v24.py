@@ -49,7 +49,8 @@ class ChainingTest(unittest.TestCase):
         # a~b and b~c, but a is not similar to c: c must not join a's group through b
         import engine
         # 1 bit apart for a-b and b-c, 2 bits for a-c; images carry 20 hashes each
-        sigs = {"a.png": [0b00] * 20, "b.png": [0b01] * 20, "c.png": [0b11] * 20}
+        same = [0.0] * 15  # same colour, so only the shape decides
+        sigs = {"a.png": ([0b00] * 20, same), "b.png": ([0b01] * 20, same), "c.png": ([0b11] * 20, same)}
         with mock.patch.object(engine, "_signature", side_effect=lambda p, m: sigs[os.path.basename(p)]), \
                 tempfile.TemporaryDirectory() as root:
             for name in sigs:

@@ -43,6 +43,7 @@ SHINGLE = 5          # words per shingle when comparing documents
 TEXT_BYTES = 200_000  # how much of each document to read
 VIDEO_FRAMES = 40    # frames sampled (one every two seconds, up to 80 s) when comparing videos
 VIDEO_CROPS = (1.0, 0.95, 0.9, 0.85, 0.8)  # centre crops of each frame, as a share of its size
+COLOUR_TOLERANCE = 12  # images: largest average colour difference (0-255) for two images to count as the same
 VIDEO_FRAME_CORR = 0.96  # two frames count as the same when their pixels correlate at least this much
 
 
@@ -157,14 +158,22 @@ def _bits(px, width=9, height=8):
     return bits
 
 
+def _colour(im):
+    """Average red, green and blue over the whole image. Unchanged by rotation, so copies still match."""
+    small = np.asarray(im.convert("RGB").resize((64, 64), Image.BILINEAR), dtype=np.float32)
+    return [float(v) for v in small.reshape(-1, 3).mean(axis=0)]
+
+
 def _dhash(path):
-    """Hashes of an image rotated 0/90/180/270 degrees, each also centre-cropped to 100/95/90/85/80%.
+    """Hashes of an image rotated 0/90/180/270 degrees, each also centre-cropped to 100/95/90/85/80%,
+    and the image's colour summary (see _colour).
 
     256-bit hashes on a 17x16 grid. A copy that was rotated, cropped or recompressed matches one of these,
-    so the best match over all combinations is kept (see _is_similar).
+    so the best match over all combinations is kept (see _image_groups).
     """
     out = []
     with Image.open(path) as im0:
+        colour = _colour(im0)
         im = im0.convert("L")
         for rot in (0, 90, 180, 270):
             r = im.rotate(rot, expand=True) if rot else im
@@ -173,7 +182,7 @@ def _dhash(path):
                 dx, dy = int(w * (1 - keep) / 2), int(h * (1 - keep) / 2)
                 c = r.crop((dx, dy, w - dx, h - dy)) if keep < 1 else r
                 out.append(_bits(c.resize((17, 16), Image.LANCZOS).tobytes(), 17, 16))
-    return out
+    return out, colour
 
 
 def _video_frames(path):
@@ -447,7 +456,8 @@ def _image_groups(sigs, threshold, work):
     n = len(sigs)
     if n < 2:
         return []
-    raw = b"".join(h.to_bytes(32, "big") for _p, hashes in sigs for h in hashes)
+    raw = b"".join(h.to_bytes(32, "big") for _p, (hashes, _c) in sigs for h in hashes)
+    colours = np.array([c for _p, (_h, c) in sigs], dtype=np.float32)
     bits = np.unpackbits(np.frombuffer(raw, dtype=np.uint8)).astype(np.float32)
     xp = _array_module()
     signs = xp.asarray(1.0 - 2.0 * bits).reshape(n * 20, 256)
@@ -456,7 +466,9 @@ def _image_groups(sigs, threshold, work):
         work.tick("Comparing images")
         dist = (256.0 - signs[i * 20:(i + 1) * 20] @ signs.T) / 2  # (20, 20 * n)
         best = dist.reshape(20, n, 20).min(axis=(0, 2))
-        similar[i] = (best.get() if xp is not np else best) <= threshold
+        same_shape = (best.get() if xp is not np else best) <= threshold
+        same_colour = np.abs(colours - colours[i]).mean(axis=1) <= COLOUR_TOLERANCE
+        similar[i] = same_shape & same_colour
     groups = []
     for i in range(n):  # a file joins a group only if it matches every member
         for g in groups:

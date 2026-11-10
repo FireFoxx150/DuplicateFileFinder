@@ -1,3 +1,10 @@
+dupefinder (2.7.1) unstable; urgency=medium
+
+  * Similar images also compare average colour, so images with the same
+    shape but different colours are no longer grouped together.
+
+ -- matthew <firefoxx.ms@gmail.com>  Tue, 10 Nov 2026 13:00:00 +0000
+
 dupefinder (2.7.0) unstable; urgency=medium
 
   * Remove duplicate bookmarks in Firefox and Brave (Tools menu or

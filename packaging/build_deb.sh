@@ -3,7 +3,7 @@
 # Needs PyInstaller and the app's requirements in $PYTHON (default: python3).
 set -euo pipefail
 
-VERSION=2.7.0
+VERSION=2.7.1
 ARCH=$(dpkg --print-architecture)
 PYTHON=${PYTHON:-python3}
 ROOT=$(cd "$(dirname "$0")/.." && pwd)

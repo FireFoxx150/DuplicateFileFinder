@@ -33,6 +33,10 @@ The main window after a scan. Each group lists its copies, the preview pane show
 
 ![Main window after a scan](docs/screenshots/main-window.png)
 
+Similar images mode groups copies that were resized or recompressed. Images are only grouped when their colours also match, so the beaches below stay apart. The demo files are synthetic.
+
+![Similar images mode](docs/screenshots/similar-images.png)
+
 ## Using the window
 
 1. Pick a mode: exact copies, similar images, similar documents, similar videos, similar audio,
