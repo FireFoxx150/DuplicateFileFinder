@@ -27,6 +27,12 @@ pip install -r requirements.txt
 python3 gui.py
 ```
 
+## Screenshots
+
+The main window after a scan. Each group lists its copies, the preview pane shows the selected file, and the status line gives the totals. This screenshot uses a demo folder of synthetic files.
+
+![Main window after a scan](docs/screenshots/main-window.png)
+
 ## Using the window
 
 1. Pick a mode: exact copies, similar images, similar documents, similar videos, similar audio,
