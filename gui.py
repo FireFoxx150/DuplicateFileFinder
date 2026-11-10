@@ -195,6 +195,9 @@ class App:
         t.add_command(label=_("Space by type…"), command=self.space_by_type_window)
         t.add_command(label=_("Disk usage map…"), command=self.disk_map_window)
         t.add_command(label=_("Custom actions…"), command=self.actions_dialog)
+        t.add_separator()
+        t.add_command(label=_("Remove duplicate bookmarks…"), command=self.bookmarks_dedupe)
+        t.add_command(label=_("Organize bookmarks…"), command=self.bookmarks_organize)
         t.add_command(label=_("Command palette"), command=self.command_palette, accelerator="Ctrl+K")
         t.add_command(label=_("History…"), command=self.history_window)
         bar.add_cascade(label=_("Tools"), menu=t)
@@ -1262,6 +1265,29 @@ class App:
 
         canvas.bind("<Button-1>", click)
         draw()
+
+    def _bookmark_task(self, title, dry_run, apply_run, question):
+        """Show the plan, ask for confirmation, then make the change and show what was done."""
+        self._listing(title, dry_run())
+        if not messagebox.askyesno(title, question):
+            return
+        self._listing(title, apply_run())
+
+    def bookmarks_dedupe(self):
+        import bookmarks
+        self._bookmark_task(
+            _("Remove duplicate bookmarks"),
+            lambda: bookmarks.run(apply=False),
+            lambda: bookmarks.run(apply=True),
+            _("Remove the extra copies? The oldest copy of each address is kept. Backups are made first."))
+
+    def bookmarks_organize(self):
+        import organize
+        self._bookmark_task(
+            _("Organize bookmarks"),
+            lambda: organize.run(apply=False),
+            lambda: organize.run(apply=True),
+            _("Organize the bookmarks into topic and website folders? Backups are made first."))
 
     def actions_dialog(self):
         win = tk.Toplevel(self.root)

@@ -158,6 +158,13 @@ def _live(args, opts):
 
 
 def main(argv=None):
+    words = sys.argv[1:] if argv is None else argv
+    if words[:1] == ["bookmarks"]:  # dupefinder-cli bookmarks [--apply]: browser bookmarks, not folders
+        import bookmarks
+        return bookmarks.main(words[1:])
+    if words[:1] == ["organize"]:  # dupefinder-cli organize [--apply]: sort bookmarks into topic folders
+        import organize
+        return organize.main(words[1:])
     p = argparse.ArgumentParser(prog="dupefinder-cli", description="Find duplicate files.")
     p.add_argument("folder", help="folder to scan")
     p.add_argument("--mode", choices=["exact", "images", "documents", "videos", "audio"], default="exact")

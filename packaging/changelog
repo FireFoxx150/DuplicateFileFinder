@@ -1,3 +1,14 @@
+dupefinder (2.7.0) unstable; urgency=medium
+
+  * Remove duplicate bookmarks in Firefox and Brave (Tools menu or
+    dupefinder-cli bookmarks). The oldest copy of each address is kept.
+  * Organize bookmarks into topic folders, one folder per website, on the
+    toolbar (Firefox) or bookmark bar (Brave). Empty folders are removed.
+  * Both change the browser files only while the browser is closed, and
+    back the files up first. Firefox records deletions so Sync uploads them.
+
+ -- matthew <firefoxx.ms@gmail.com>  Tue, 10 Nov 2026 12:00:00 +0000
+
 dupefinder (2.6.0) unstable; urgency=medium
 
   * Similar videos compare frames by pixel correlation, allowing for crops,
