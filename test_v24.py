@@ -163,3 +163,81 @@ class GuiTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class LargeDissimilarImagesTest(unittest.TestCase):
+    """czkawka #2093: large images were grouped even when their content was unrelated."""
+
+    def test_large_unrelated_images_are_not_grouped(self):
+        import tempfile
+        from PIL import Image as PILImage
+        from engine import Options, find_duplicates
+        d = tempfile.mkdtemp()
+        gradient = PILImage.linear_gradient("L").resize((3600, 2400)).convert("RGB")
+        checker = PILImage.new("RGB", (3600, 2400), (255, 255, 255))
+        for x in range(0, 3600, 200):
+            for y in range(0, 2400, 200):
+                if (x // 200 + y // 200) % 2:
+                    checker.paste((0, 0, 0), (x, y, x + 200, y + 200))
+        gradient.save(os.path.join(d, "gradient.png"))
+        checker.save(os.path.join(d, "checker.png"))
+        res = find_duplicates(d, Options(mode="images", threshold=16))
+        self.assertEqual(res.groups, [])
+
+
+class PartialScanOnCancelTest(unittest.TestCase):
+    """czkawka #2046: a cancelled scan should keep the duplicate groups it had already confirmed."""
+
+    def test_cancel_keeps_groups_already_found(self):
+        import tempfile
+        import threading
+        from engine import Options, find_duplicates
+        d = tempfile.mkdtemp()
+        for name, body in [("a1", b"x" * 10), ("a2", b"x" * 10), ("b1", b"y" * 20), ("b2", b"y" * 20)]:
+            with open(os.path.join(d, name), "wb") as f:
+                f.write(body)
+        cancel = threading.Event()
+        seen = {}
+
+        def progress(label, done, total):
+            seen["total"] = total
+            if done >= total - 1:  # the last tick is the final hash of the last group
+                cancel.set()
+
+        res = find_duplicates(d, Options(mode="exact"), cancel=cancel, progress=progress)
+        self.assertTrue(res.cancelled)
+        self.assertEqual(len(res.groups), 1)
+
+
+class FolderSummaryTest(unittest.TestCase):
+    """czkawka #2091: say what is only in each folder, and how much of A has a copy in B."""
+
+    def test_only_in_each_folder_and_similarity(self):
+        import tempfile
+        from engine import Options, compare_folders
+        a, b = tempfile.mkdtemp(), tempfile.mkdtemp()
+        for folder, name, body in [(a, "common.txt", b"same"), (a, "only_a.txt", b"left"),
+                                   (b, "common_copy.txt", b"same"), (b, "only_b.txt", b"right")]:
+            with open(os.path.join(folder, name), "wb") as f:
+                f.write(body)
+        res = compare_folders(a, b, Options(mode="exact"))
+        self.assertEqual([os.path.basename(p) for p in res.unmatched], ["only_a.txt"])
+        self.assertEqual([os.path.basename(p) for p in res.only_b], ["only_b.txt"])
+        self.assertAlmostEqual(res.similarity, 0.5)
+
+
+class ExcludedSubfolderTest(unittest.TestCase):
+    """dupeGuru #1328: a subfolder inside a scanned folder must be skippable."""
+
+    def test_excluded_subfolder_is_skipped(self):
+        import tempfile
+        from engine import Options, find_duplicates
+        root = tempfile.mkdtemp()
+        for sub in ("keep", "test_sub3"):
+            os.makedirs(os.path.join(root, sub))
+            with open(os.path.join(root, sub, "a.txt"), "wb") as f:
+                f.write(b"same")
+        res = find_duplicates(root, Options(mode="exact", exclude_patterns=["test_sub3"]))
+        self.assertEqual(res.groups, [])
+        res = find_duplicates(root, Options(mode="exact"))
+        self.assertEqual(len(res.groups), 1)

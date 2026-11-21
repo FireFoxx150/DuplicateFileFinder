@@ -619,13 +619,14 @@ class App:
         self.sizes = [os.path.getsize(g[0]) for g in self.groups]
         self._render()
         if res.cancelled:
-            self.status.set(_("Scan cancelled."))
+            self.status.set(_("Scan cancelled. {n} groups found so far.").format(n=len(self.groups)))
             return
         wasted = sum(s * (len(g) - 1) for s, g in zip(self.sizes, self.groups))
         text = _("{n} groups, {w} reclaimable, {e} skipped, {s:.1f}s").format(
             n=len(self.groups), w=human(wasted), e=len(self.errors), s=secs)
         if self.mode.get() == COMPARE:
-            text += _(", {n} only in A").format(n=len(self.unmatched))
+            text += _(", {n} only in A, {m} only in B, {p:.0f}% of A in B").format(
+                n=len(self.unmatched), m=len(res.only_b), p=res.similarity * 100)
         self.status.set(text)
         self._notify(text)
 

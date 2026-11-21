@@ -73,6 +73,8 @@ class Options:
 class Result:
     groups: list = field(default_factory=list)  # each group is a list of paths
     unmatched: list = field(default_factory=list)  # compare mode: files with no copy in B
+    only_b: list = field(default_factory=list)  # compare mode: files with no copy in A
+    similarity: float = 0.0  # compare mode: share of A's files that have a copy in B
     name_clashes: list = field(default_factory=list)  # same file name, different content
     errors: list = field(default_factory=list)
     cancelled: bool = False
@@ -346,8 +348,9 @@ def _bucket(items, key, work, errors):
     return [b for b in buckets.values() if len(b) > 1]
 
 
-def _exact_groups(by_size, work, errors, cache, verify_bytes=False):
-    groups = []
+def _exact_groups(by_size, work, errors, cache, verify_bytes=False, groups=None):
+    """Appends each confirmed group to groups as it is found, so a cancel keeps the ones found so far."""
+    groups = [] if groups is None else groups
     for size, items in by_size.items():
         if len(items) < 2:
             continue
@@ -497,7 +500,7 @@ def find_duplicates(root, opts=None, cancel=None, progress=None, cache_path=None
         by_size = _collect(root, opts, result.errors, ctl)
         if opts.mode == "exact":
             work = _Work(_work_total(by_size), progress, ctl)
-            result.groups = _exact_groups(by_size, work, result.errors, cache, opts.verify_bytes)
+            _exact_groups(by_size, work, result.errors, cache, opts.verify_bytes, result.groups)
             result.name_clashes = _name_clashes(_all(by_size), result.groups)
         else:
             items = _all(by_size)
@@ -536,13 +539,17 @@ def compare_folders(a, b, opts=None, cancel=None, progress=None, cache_path=None
             cache.close()
 
     a_abs, b_abs = os.path.abspath(a) + os.sep, os.path.abspath(b) + os.sep
-    matched_a = set()
+    matched_a, matched_b = set(), set()
     for g in groups:
         in_a = [p for p in g if os.path.abspath(p).startswith(a_abs)]
         in_b = [p for p in g if os.path.abspath(p).startswith(b_abs)]
         if in_a and in_b:
             result.groups.append(g)
             matched_a.update(in_a)
-    result.unmatched = sorted(p for p, _ in _all(by_a) if p not in matched_a)
+            matched_b.update(in_b)
+    all_a, all_b = [p for p, _ in _all(by_a)], [p for p, _ in _all(by_b)]
+    result.unmatched = sorted(p for p in all_a if p not in matched_a)
+    result.only_b = sorted(p for p in all_b if p not in matched_b)
+    result.similarity = len(matched_a) / len(all_a) if all_a else 0.0
     result.groups.sort(key=lambda g: (-os.path.getsize(g[0]), g[0]))
     return result

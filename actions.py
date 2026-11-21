@@ -10,12 +10,13 @@ import sys
 import time
 from collections import defaultdict
 
-from PIL import Image
+from PIL import Image, ImageFilter, ImageStat
 from send2trash import send2trash
 
 from engine import AUDIO_EXTS, IMAGE_EXTS
 
-KEEP_RULES = ("newest", "oldest", "shortest path", "prefer folder", "prefer clean name", "prefer best version")
+KEEP_RULES = ("newest", "oldest", "shortest path", "prefer folder", "prefer clean name", "prefer best version",
+              "prefer sharpest")
 RAW_EXTS = {".cr2", ".cr3", ".nef", ".arw", ".dng", ".raf", ".orf", ".rw2"}
 JPEG_EXTS = {".jpg", ".jpeg"}
 _COPY_SUFFIX = re.compile(r"( \(\d+\)| - copy| copy|~|\.copy)$", re.IGNORECASE)
@@ -42,6 +43,17 @@ def _quality(path):
     return os.path.getsize(path)
 
 
+def _sharpness(path):
+    """Spread of edge strength in an image. Blurred or soft copies score lower. Other files score 0."""
+    if os.path.splitext(path)[1].lower() not in IMAGE_EXTS:
+        return 0.0
+    try:
+        with Image.open(path) as im:
+            return ImageStat.Stat(im.convert("L").filter(ImageFilter.FIND_EDGES)).var[0]
+    except Exception:
+        return 0.0
+
+
 def keeper(group, rule, prefer=None):
     if rule == "prefer folder" and prefer:
         inside = [p for p in group if p.startswith(prefer.rstrip(os.sep) + os.sep)]
@@ -56,6 +68,8 @@ def keeper(group, rule, prefer=None):
         return min(group, key=lambda p: (_clean_penalty(p), -os.path.getmtime(p), p))
     if rule == "prefer best version":
         return max(group, key=lambda p: (_quality(p), os.path.getmtime(p), p))
+    if rule == "prefer sharpest":
+        return max(group, key=lambda p: (_sharpness(p), os.path.getmtime(p), p))
     return min(group, key=lambda p: (len(p), p))
 
 

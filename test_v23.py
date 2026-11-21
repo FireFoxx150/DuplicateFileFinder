@@ -186,3 +186,16 @@ class InotifyTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SharpestKeeperTest(unittest.TestCase):
+    def test_prefer_sharpest_keeps_the_crisp_copy(self):
+        import tempfile
+        from PIL import ImageFilter
+        d = tempfile.mkdtemp()
+        sharp = Image.effect_mandelbrot((200, 200), (-2, -1.5, 1, 1.5), 100).convert("RGB")
+        soft = sharp.filter(ImageFilter.GaussianBlur(3))
+        a, b = os.path.join(d, "a.png"), os.path.join(d, "b.png")
+        soft.save(a); sharp.save(b)
+        self.assertEqual(actions.keeper([a, b], "prefer sharpest"), b)
+        self.assertEqual(actions.keeper([b, a], "prefer sharpest"), b)
