@@ -1,3 +1,11 @@
+dupefinder (2.7.2) unstable; urgency=medium
+
+  * New keep rule: prefer sharpest image (keeps the crisp copy of a set).
+  * A cancelled exact-duplicate scan keeps the groups found so far.
+  * Folder compare reports files only in B and the share of A with a copy in B.
+
+ -- matthew <firefoxx.ms@gmail.com>  Sat, 21 Nov 2026 09:00:00 +0000
+
 dupefinder (2.7.1) unstable; urgency=medium
 
   * Similar images also compare average colour, so images with the same
