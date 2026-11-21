@@ -192,7 +192,7 @@ def _video_frames(path):
     if not exe:
         raise OSError("ffmpeg is needed for video similarity")
     proc = subprocess.run(
-        [exe, "-v", "error", "-t", "90", "-i", path, "-vf", "fps=1/2,scale=68:64,format=gray",
+        [exe, "-v", "error", "-t", "90", "-protocol_whitelist", "file", "-i", path, "-vf", "fps=1/2,scale=68:64,format=gray",
          "-frames:v", str(VIDEO_FRAMES), "-f", "rawvideo", "-"],
         capture_output=True, timeout=200,
     )

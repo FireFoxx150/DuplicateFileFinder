@@ -42,7 +42,7 @@ def _pdf(path):
 def _frame(path, seek):
     args = ["-ss", "1"] if seek else []
     proc = subprocess.run(
-        ["ffmpeg", "-v", "error", *args, "-i", path, "-frames:v", "1",
+        ["ffmpeg", "-v", "error", *args, "-protocol_whitelist", "file", "-i", path, "-frames:v", "1",
          "-f", "image2pipe", "-vcodec", "png", "-"],
         capture_output=True, timeout=30,
     )

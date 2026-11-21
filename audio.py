@@ -20,7 +20,7 @@ def _pcm(path):
     if not exe:
         raise OSError("ffmpeg is needed for audio similarity")
     proc = subprocess.run(
-        [exe, "-v", "error", "-t", str(MAX_SECONDS), "-i", path, "-ac", "1", "-ar", str(RATE),
+        [exe, "-v", "error", "-t", str(MAX_SECONDS), "-protocol_whitelist", "file", "-i", path, "-ac", "1", "-ar", str(RATE),
          "-f", "s16le", "-"],
         capture_output=True, timeout=180,
     )

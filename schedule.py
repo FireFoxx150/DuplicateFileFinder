@@ -16,6 +16,9 @@ def _quote(arg):
 
 
 def unit_text(folder, hours, cli_path, report_path):
+    for value in (folder, cli_path, report_path):
+        if "\n" in value or "\r" in value:
+            raise ValueError("Paths with line breaks cannot be scheduled.")
     service = (
         "[Unit]\n"
         f"Description=Scan {folder} for duplicate files\n\n"
