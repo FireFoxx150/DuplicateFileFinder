@@ -1,0 +1,42 @@
+source,url,date,rating,text
+github-issues,https://github.com/arsenetar/dupeguru/issues/1360,2026-02-09,,I thought it was common sense to do a full re-hash of the **potentially** duplicate files when the partial hashes match.
+github-issues,https://github.com/arsenetar/dupeguru/issues/1373,2026-03-29,,I needed to do a fresh new scan because I still had duplicate files in my folders that weren't showing up in dupeGuru.
+github-issues,https://github.com/arsenetar/dupeguru/issues/1374,2026-03-29,,"In the list of duplicates the ""mark box"" sometimes is at the wrong file."
+github-issues,https://github.com/arsenetar/dupeguru/issues/1369,2026-02-21,,"I have multiple external hard drives, and at least three of them exhibit the same issue"
+github-issues,https://github.com/arsenetar/dupeguru/issues/1337,2025-10-31,,I regularly batch download all of my DeviantArt favorites. Each is a full backup that goes to a new folder.
+github-issues,https://github.com/arsenetar/dupeguru/issues/1351,2025-12-30,,dupeGuru (version 4.3.1) does not find files with the same name that only differ in their extension. My operating system is Debian Linux.
+github-issues,https://github.com/arsenetar/dupeguru/issues/1388,2026-04-27,,Files on different filesystems incorrectly removed as hardlink duplicates
+github-issues,https://github.com/arsenetar/dupeguru/issues/1397,2026-05-17,,"The bottom left + add directory button is grey with a black BG color, making it nearly impossible to see."
+github-issues,https://github.com/arsenetar/dupeguru/issues/1344,2025-11-25,,that program started eating 130gb of ram and eventually my entire system died due to running out of
+github-issues,https://github.com/arsenetar/dupeguru/issues/1362,2026-02-12,,The scan has been running non-stop for four days.
+github-issues,https://github.com/arsenetar/dupeguru/issues/1382,2026-04-14,,I want to use this program with Qt6 instead of Qt5.
+github-issues,https://github.com/arsenetar/dupeguru/issues/1347,2025-12-03,,Cannot run rpm on Fedora 43
+github-issues,https://github.com/arsenetar/dupeguru/issues/1398,2026-05-22,,drag one or more reference images into the software
+github-issues,https://github.com/arsenetar/dupeguru/issues/1328,2025-10-08,,"""Excluded"" folder cannot be added when it is a subfolder of another folder"
+github-issues,https://github.com/qarmin/czkawka/issues/2093,2026-10-07,,"Large images (like width > 3000 pix, height similar) are marked as dupes when they are completely different, in no way similar contents."
+github-issues,https://github.com/qarmin/czkawka/issues/2099,2026-10-16,,“Select all except biggest resolution” selects all but the first item in groups where every image has the same resolution
+github-issues,https://github.com/qarmin/czkawka/issues/2138,2026-11-08,,Name comparison doesn't work properly
+github-issues,https://github.com/qarmin/czkawka/issues/2091,2026-10-03,,I find myself often comparing two folders and looking for missing files
+github-issues,https://github.com/qarmin/czkawka/issues/2085,2026-09-27,,Krokiet seems to get stuck on hashing when finding similar videos.
+github-issues,https://github.com/qarmin/czkawka/issues/2046,2026-08-20,,It would be nice if there was a choice to perform the selected function on the scanned objects when cancelling the task.
+github-issues,https://github.com/qarmin/czkawka/issues/2064,2026-09-04,,"using right click operations such as `Remove from Results`, `Exclude Item`, etc... will only work on the item on which the right click event occurred, not the whole selection."
+github-issues,https://github.com/qarmin/czkawka/issues/2052,2026-08-22,,would be easier to review if they could be sorted according to file size or file dates.
+github-issues,https://github.com/qarmin/czkawka/issues/2107,2026-10-18,,"I would appreciate it if sets of paths, the reference path in this set and the comparison method could be saved for reuse."
+github-issues,https://github.com/qarmin/czkawka/issues/2045,2026-08-20,,I had to scan a new folder to wipe the previous list.
+github-issues,https://github.com/qarmin/czkawka/issues/2111,2026-10-20,,This is unnecessary and impacts performance.
+github-issues,https://github.com/qarmin/czkawka/issues/2067,2026-09-07,,"The audio fingerprint option has helped me find many, many duplicates and quite efficiently."
+github-issues,https://github.com/qarmin/czkawka/issues/2056,2026-08-28,,[krokiet] Takes 5-7 seconds to close & relaunches itself during closing
+hacker-news,https://news.ycombinator.com/item?id=40379388,2024-05-16,,"The main deduplicator software I tried can detect near-duplicates well (eg visually similar photos taken a fraction of a second apart) but it doesn't choose the best one to keep: it will suggest to keep a version where people have their eyes closed, and delete one with eyes open, for example."
+hacker-news,https://news.ycombinator.com/item?id=27635721,2021-06-25,,The app worked but was very slow due to Python's image processing libraries.
+hacker-news,https://news.ycombinator.com/item?id=27635769,2021-06-25,,"I wish I had something like this for my iPhone that would automatically soft delete duplicate photos, picking out the sharpest one."
+hacker-news,https://news.ycombinator.com/item?id=28364672,2021-08-31,,"fdupes is the classic (going way way back) but it's really very slow, not worth using anymore."
+hacker-news,https://news.ycombinator.com/item?id=36683135,2023-07-11,,"But I switched over to czkawka, which has a better interface for comparing files, and seems to be a bit faster"
+hacker-news,https://news.ycombinator.com/item?id=47246992,2026-03-04,,"I just released dupeSweep, a duplicate file finder I built after getting frustrated with existing tools that permanently delete files without confirmation."
+hacker-news,https://news.ycombinator.com/item?id=23052946,2020-05-02,,I was looking for a duplicate file/photo finder and read some reviews about losing data so I said why would I trust a third party for my data and wrote a dupe finder.
+hacker-news,https://news.ycombinator.com/item?id=40470586,2024-05-24,,it's the fastest and most flexible open source dup finder as of last year or so
+hacker-news,https://news.ycombinator.com/item?id=8519850,2014-10-28,,Local programs like Visipics or Duplicate Annihilator just can't do the job on my underpowered hardware.
+reddit,https://www.reddit.com/r/DataHoarder/comments/1ipvfnf/massive_deduping_job_millions_of_files_terabyes/,2025-02-15,,Dupeguru was not up to this.
+reddit,https://www.reddit.com/r/immich/comments/1qfoq1z/beginner_looking_for_help_i_fear_my_photos_are/,2026-01-17,,So then I tried running dupeGuru on the entire D:/ drive and it didn't even identify any of the duplicates I was seeing.
+reddit,https://www.reddit.com/r/datacurator/comments/s109aw/help_looking_for_software_that_can_analyze/,2022-01-11,,However my issue is that I am running into very SIMILAR files (not exact dupes) which DupeGuru is not flagging.
+reddit,https://www.reddit.com/r/DataHoarder/comments/1nfkxyz/best_software_for_deduplicating_images/,2025-09-13,,"I want to use a software to find these duplicates and I want to analyze them, because to me is inportant to keep the most original one (best resolution and most original metadata, especially the date)."
+reddit,https://www.reddit.com/r/opendirectories/comments/4l1sby/tools_for_managing_a_big_cluster_of_unsorted_files/,2016-05-25,,DupeGURU is very useful for referencing a file without the danger of deleting the original data instead of the duplicates.

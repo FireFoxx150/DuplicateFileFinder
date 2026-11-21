@@ -1,0 +1,28 @@
+{
+  "_about": "Themes for duplicate-file finders (dupeGuru, czkawka and similar). Written for this project, not the skill default.",
+  "request_patterns": ["\\bi wish\\b", "\\bwould be (nice|great|good|helpful)\\b", "\\bwould love\\b", "\\bneeds? (a|an|the|to|more)\\b", "\\bno way to\\b", "\\bfeature request\\b", "\\bif only\\b", "\\bi (would )?(like|want) (a|an|to)\\b", "\\bneed a\\b", "\\bit would\\b", "\\bcould (a|an)\\b", "\\bi appreciate\\b", "\\bneeded?\\b"],
+  "themes": [
+    {"id": "data-safety", "label": "Fear of losing files; no undo or confirmation", "kind": "complaint",
+     "patterns": ["permanently delete", "without confirmation", "data loss", "losing data", "lost my", "danger of deleting", "trust a third party", "lost my cache", "delete the original"]},
+    {"id": "missed-duplicates", "label": "Misses real duplicates", "kind": "complaint",
+     "patterns": ["didn'?t even identify", "not flagging", "doesn'?t (find|flag|identify)", "does not find", "not finding", "didn'?t find", "not showing up", "weren'?t showing up", "not flagged", "no results for"]},
+    {"id": "false-positives", "label": "Flags files that are not duplicates", "kind": "complaint",
+     "patterns": ["falsely", "incorrectly", "wrongly", "marked as dupes", "completely different", "not similar", "removes files"]},
+    {"id": "keeper-choice", "label": "Cannot choose the best copy to keep", "kind": "request",
+     "patterns": ["best one to keep", "most original", "best resolution", "sharpest", "eyes closed", "select all except", "which one to keep", "choose the best", "keep the most"]},
+    {"id": "speed-memory", "label": "Slow, stuck or heavy on memory", "kind": "complaint",
+     "patterns": ["\\bslow\\b", "\\bvery slow\\b", "\\bram\\b", "\\bmemory\\b", "\\bstuck\\b", "\\bfrozen\\b", "\\bforever\\b", "\\bseconds\\b", "\\bfor four days\\b", "\\bnon-stop\\b", "\\bfaster\\b", "\\bfastest\\b", "\\bspeed\\b", "\\bhardware\\b"]},
+    {"id": "crashes", "label": "Crashes, errors and will not start", "kind": "complaint",
+     "patterns": ["\\bcrash", "\\bdoesn'?t start\\b", "\\bdoes not start\\b", "\\berror\\b", "\\bdied\\b", "\\bnot working\\b", "\\bmessage\\b", "\\bstopped\\b"]},
+    {"id": "install-platform", "label": "Install, packaging and platform gaps", "kind": "request",
+     "patterns": ["\\bfedora\\b", "\\brpm\\b", "\\bhomebrew\\b", "\\bflathub\\b", "\\binstall", "\\bqt6\\b", "\\bqt5\\b", "\\breproduc", "\\bmacos\\b", "\\bmac\\b", "\\bwindows 11\\b", "\\bdebian\\b", "\\bandroid\\b"]},
+    {"id": "folder-compare", "label": "Compare two folders, or search one folder against another", "kind": "request",
+     "patterns": ["compar(e|ing) two", "two folders", "two directories", "reference", "inner vs outer", "exist anywhere else", "reference images"]},
+    {"id": "similar-content", "label": "Similar, not identical files", "kind": "request",
+     "patterns": ["\\bsimilar\\b", "near-duplicate", "not exact", "fuzzy", "visually similar"]},
+    {"id": "exclusions", "label": "Exclude folders and paths", "kind": "complaint",
+     "patterns": ["\\bexcluded\\b", "\\bexclude\\b", "subfolder of another"]},
+    {"id": "ui-controls", "label": "Interface, selection and review controls", "kind": "request",
+     "patterns": ["\\binterface\\b", "dark mode", "\\bbutton\\b", "right click", "\\bsort", "\\bclear\\b", "ctrl-?f", "\\bmark\\b", "\\bmenu\\b", "screen reader", "\\bcancel", "partial results", "profiles?", "path-sets", "save"]}
+  ]
+}

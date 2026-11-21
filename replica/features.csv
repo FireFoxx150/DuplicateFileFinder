@@ -1,0 +1,8 @@
+feature,area,priority,original,clone,notes
+Keep the copy with the sharpest image and the oldest original date,keeper rules,must,no,no,Evidence: HN 40379388; Reddit 1nfkxyz; HN 27635769. Extend actions.py keeper rules.
+Regression test: large dissimilar images must not group as similar,similar images,must,no,no,Evidence: czkawka #2093. Add a test with a large (width over 3000) pair of unrelated images.
+Memory stays bounded on a 100k-file folder,scanning,must,no,no,Evidence: dupeGuru #1344 and #1362. Measure first; stream hashing if RAM grows with file count.
+Keep partial results when a scan is cancelled,scanning,should,no,no,Evidence: czkawka #2046 (thin).
+"Match by file name, ignoring extension case",scanning,should,no,no,Evidence: dupeGuru #1351; czkawka #2138 (thin).
+"Two-folder summary: identical, only in A, only in B, percent similar",folder compare,should,no,no,Evidence: czkawka #2091 (thin).
+Verify an excluded subfolder inside an included folder is skipped,scanning,should,no,no,Evidence: dupeGuru #1328 (thin). Check first; fix only if broken.
