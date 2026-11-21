@@ -1191,7 +1191,11 @@ class App:
                 msg.set(_("Hours must be a whole number."))
                 return
             os.makedirs(os.path.dirname(REPORT_PATH), exist_ok=True)
-            schedule.write_units(folder.get(), h, _cli_path(), REPORT_PATH)
+            try:
+                schedule.write_units(folder.get(), h, _cli_path(), REPORT_PATH)
+            except ValueError as e:
+                msg.set(str(e))
+                return
             for cmd in (["daemon-reload"], ["enable", "--now", schedule.TIMER]):
                 subprocess.run(["systemctl", "--user", *cmd], capture_output=True)
             msg.set(_("Scheduled. Reports are written to {r}.").format(r=REPORT_PATH))

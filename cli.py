@@ -4,6 +4,7 @@ import json
 import os
 import shutil
 import smtplib
+import ssl
 import subprocess
 import sys
 import threading
@@ -51,7 +52,7 @@ def send_report(groups, args):
             msg.add_attachment(f.read(), maintype="text", subtype="html", filename="duplicates.html")
     with smtplib.SMTP(args.smtp_host, args.smtp_port, timeout=30) as smtp:
         if args.smtp_tls:
-            smtp.starttls()
+            smtp.starttls(context=ssl.create_default_context())
         smtp.send_message(msg)
 
 

@@ -1,3 +1,17 @@
+dupefinder (2.7.3) unstable; urgency=medium
+
+  * Security fixes from an internal audit:
+    - --smtp-tls now verifies the mail server's certificate and hostname.
+    - Replacing copies with hard links checks that the bytes match first, and
+      never deletes a file that happens to share the temporary name.
+    - Undo no longer overwrites a file that is already at the original path.
+    - Scheduled scans refuse folder names with line breaks, which could add
+      systemd directives to the generated unit.
+    - Video, audio and thumbnail decoding passes ffmpeg only plain files, so
+      playlists and network protocols are refused.
+
+ -- matthew <firefoxx.ms@gmail.com>  Sat, 21 Nov 2026 12:00:00 +0000
+
 dupefinder (2.7.2) unstable; urgency=medium
 
   * New keep rule: prefer sharpest image (keeps the crisp copy of a set).

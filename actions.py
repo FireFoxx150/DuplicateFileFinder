@@ -1,5 +1,6 @@
 """Actions on duplicate groups: choosing keepers, trashing, moving, hard-linking, opening, exporting."""
 import csv
+import filecmp
 import json
 import os
 import re
@@ -8,6 +9,7 @@ import shutil
 import subprocess
 import sys
 import time
+import uuid
 from collections import defaultdict
 
 from PIL import Image, ImageFilter, ImageStat
@@ -210,6 +212,9 @@ def undo_moves(undo_path):
         if not os.path.exists(item["to"]):
             failed.append((item["to"], "no longer there"))
             continue
+        if os.path.lexists(item["from"]):
+            failed.append((item["to"], "a file is already at the original path"))
+            continue
         try:
             os.makedirs(os.path.dirname(item["from"]), exist_ok=True)
             shutil.move(item["to"], item["from"])
@@ -234,15 +239,19 @@ def hardlink_copies(groups, selected):
         for path in group:
             if path == source or path not in selected:
                 continue
-            tmp = path + ".dupefinder-link"
+            tmp = f"{path}.{uuid.uuid4().hex}.dupefinder-link"
+            made = False
             try:
                 if os.stat(path).st_dev != os.stat(source).st_dev:
                     raise OSError("on a different drive, so a hard link is not possible")
+                if not filecmp.cmp(source, path, shallow=False):
+                    raise OSError("contents differ from the kept copy, so it was left alone")
                 os.link(source, tmp)
+                made = True
                 os.replace(tmp, path)  # atomic swap, so the path always points at real data
                 linked.append(path)
             except OSError as e:
-                if os.path.lexists(tmp):
+                if made and os.path.lexists(tmp):
                     os.unlink(tmp)
                 failed.append((path, str(e)))
     return linked, failed
